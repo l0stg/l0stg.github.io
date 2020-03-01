@@ -1,7 +1,7 @@
  var modal = document.getElementById("my_modal");
  var btn = document.getElementById("MyBtn");
  var span = document.getElementsByClassName("close_modal_window")[0];
-
+ 
  // функция для открытия по нажатию на кнопку
  btn.onclick = function () { 
     modal.style.display = "block";
@@ -39,29 +39,38 @@ var flag=0; //булевская переменная для выбора нап
 var number_col = none; //переменная для хранения номера активного столбца
 //сортировка по ID
 function sort_id() {
+    action_th();//сбрасываем стили
+    document.getElementById("thumb_1").className = "zagolovok_active";//выделяем столбец
     number_col = 0;
     m.sort(function(a, b){return a.id - b.id});
     newTable();
    
 }
+//сортировка по дате, 
 function sort_date() {
+    action_th();
+    document.getElementById("thumb_3").className = "zagolovok_active";
     number_col = 2;
-    m.sort(function(a, b){return Date.parse(a.date) - Date.parse(b.date)
-        /* var adate = Date.parse(a.date),
-        bdate = Date.parse(b.date);
-      if(adate < bdate) return -1;
-      if(adate > bdate) return 1; */});
+    m.sort(function(a, b){/* return Date.parse(a.date) - Date.parse(b.date) */
+        var nameA = Date.parse(a.date);
+        var nameB = Date.parse(b.date);
+        if (nameA < nameB) { return -1; }
+        if (nameA > nameB) { return 1; } });
     newTable();
 }
 
 //Сортировка по значению
 function sort_count() {
+    action_th();
+    document.getElementById("thumb_4").className = "zagolovok_active";
     number_col = 3;
     m.sort(function(a, b){return a.count - b.count});
     newTable();
 }
 //сортировка по имени
 function sort_name() {
+    action_th();
+    document.getElementById("thumb_2").className = "zagolovok_active";
     number_col = 1;
     m.sort(function (a, b){var aname = a.name.toLowerCase(),
         bname = b.name.toLowerCase();
@@ -126,6 +135,12 @@ function tableSearch() {
     }
 }
 
-//функция выделения столбца
+//вот это очень кривая функция для удаления стилей у столбцов, сделано для того чтобы убрать выделение с прошлого столбца
+function action_th(){
+    document.getElementById("thumb_1").className = "zagolovok";
+    document.getElementById("thumb_2").className = "zagolovok";
+    document.getElementById("thumb_3").className = "zagolovok";
+    document.getElementById("thumb_4").className = "zagolovok";
 
-    document.getElementById("myel").className = "zagolovok_active";
+
+}
