@@ -25,18 +25,26 @@
       <table class="table" id="demo" >
         <thead>
         <tr >
-          <th class="zagolovok" onclick="sort_id()" >ID</th>
-          <th class="zagolovok" onclick="sort_name()">Name</th>
-          <th class="zagolovok" onclick="sort_date()" >Date</th>
-          <th class="zagolovok" onclick="sort_count()">Count</th>
+          <div >
+          <th class="zagolovok" id="thumb_1" onclick="sort_id()" >ID</th>
+          <th class="zagolovok" id="thumb_2" onclick="sort_name()">Name</th>
+          <th class="zagolovok" id="thumb_3" onclick="sort_date()" >Date</th>
+          <th class="zagolovok" id="thumb_4" onclick="sort_count()">Count</th>
+        </div>
         </tr>
         </thead>
         <tbody id="list">
-
+         <!--  тело таблицы -->
         </tbody>
       </table>
     <input class="form" type="text" placeholder="Поиск..." id="search-text" onkeyup="tableSearch()">
+
+    
 </div>
-    <script src="js/script.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/table.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/sort_table.js"></script>
+    <script src="js/action_th.js"></script>
 </body>
 </html>

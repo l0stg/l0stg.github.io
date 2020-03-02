@@ -36,7 +36,7 @@ align-items: center;
 .zagolovok_active{
     background-color: red;
     border: 2px;
-    border-color: #4CAF50;
+    cursor: pointer;
 }
 
 .my_button {
