@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <h2>#1</h2>
+  
   <div class="first_task">
+    <h2>#1</h2>
     <div class="my_button button_transform" id="MyBtn">Модальное окно</div>
       <div id="my_modal" class="modal">
         <div class="modal_content">
@@ -19,17 +20,19 @@
       </div>
   </div>
 
-  <h2 class="header">#2</h2>
+  
   <div class="first_task">
+    <h2 class="header">#2</h2>
 
-      <table class="table" id="demo" >
+    <input class="form" type="text" placeholder="Поиск..." id="search-text" onkeyup="tableSearch()">
+      <table class="table" id="table_id" >
         <thead>
         <tr >
           <div >
-          <th class="zagolovok" id="thumb_1" onclick="sort_id()" >ID</th>
-          <th class="zagolovok" id="thumb_2" onclick="sort_name()">Name</th>
-          <th class="zagolovok" id="thumb_3" onclick="sort_date()" >Date</th>
-          <th class="zagolovok" id="thumb_4" onclick="sort_count()">Count</th>
+          <th class="title" id="thumb_1" onclick="sort_id()" >ID</th>
+          <th class="title" id="thumb_2" onclick="sort_name()">Name</th>
+          <th class="title" id="thumb_3" onclick="sort_date()" >Date</th>
+          <th class="title" id="thumb_4" onclick="sort_count()">Count</th>
         </div>
         </tr>
         </thead>
@@ -37,10 +40,14 @@
          <!--  тело таблицы -->
         </tbody>
       </table>
-    <input class="form" type="text" placeholder="Поиск..." id="search-text" onkeyup="tableSearch()">
+    
 
     
 </div>
-    <script src="js/script.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/table.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/sort_table.js"></script>
+    <script src="js/action_th.js"></script>
 </body>
 </html>

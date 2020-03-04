@@ -30,13 +30,13 @@ align-items: center;
  
 /* Click */
 
-.zagolovok{
+.title{
     cursor: pointer;
 }
-.zagolovok_active{
+.title_active{
     background-color: red;
     border: 2px;
-    border-color: #4CAF50;
+    cursor: pointer;
 }
 
 .my_button {
