@@ -1,53 +1,45 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Creative</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
+<meta charset="utf-8">
+<html>
 <body>
-  
-  <div class="first_task">
-    <h2>#1</h2>
-    <div class="my_button button_transform" id="MyBtn">Модальное окно</div>
-      <div id="my_modal" class="modal">
-        <div class="modal_content">
-          <span class="close_modal_window">×</span>
-            <p>Модальное окно</p>
-        </div>
-      </div>
-  </div>
-
-  
-  <div class="first_task">
-    <h2 class="header">#2</h2>
-
-    <input class="form" type="text" placeholder="Поиск..." id="search-text" onkeyup="tableSearch()">
-      <table class="table" id="table_id" >
-        <thead>
-        <tr >
-          <div >
-          <th class="title" id="thumb_1" onclick="sort_id()" >ID</th>
-          <th class="title" id="thumb_2" onclick="sort_name()">Name</th>
-          <th class="title" id="thumb_3" onclick="sort_date()" >Date</th>
-          <th class="title" id="thumb_4" onclick="sort_count()">Count</th>
-        </div>
-        </tr>
-        </thead>
-        <tbody id="list">
-         <!--  тело таблицы -->
-        </tbody>
-      </table>
-    
-
-    
-</div>
-    <script src="js/search.js"></script>
-    <script src="js/table.js"></script>
-    <script src="js/modal.js"></script>
-    <script src="js/sort_table.js"></script>
-    <script src="js/action_th.js"></script>
+<h1>Hello World</h1>
+<p>I'm hosted with GitHub Pages.</p>
 </body>
 </html>
+<script>
+  function getMobileOperatingSystem() {
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    // Windows Phone must come first because its UA also contains "Android"
+    if (/windows phone/i.test(userAgent)) {
+      return "Windows Phone";
+    }
+
+    if (/android/i.test(userAgent)) {
+      return "Android";
+    }
+
+    // iOS detection from: http://stackoverflow.com/a/9039885/177710
+    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+      return "iOS";
+    }
+
+    return "unknown";
+  }
+
+  (function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = urlParams.get('id');
+    switch(getMobileOperatingSystem()){
+      case 'iOS': 
+        window.location = 'https://itunes.apple.com/ru/app/urentbike/id1352346712'; 
+        break;
+      case 'Android':
+        window.location = 'https://play.google.com/store/apps/details?id=ru.urentbike.app'; 
+        break;
+      default:
+        window.location = 'https://urentbike.ru'; 
+        break;
+    }
+  })();
+</script>
+<span>Mobile detect. Redirecting…</span>
