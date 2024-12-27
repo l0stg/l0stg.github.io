@@ -1,9 +1,0 @@
-[{
-    "relation": ["delegate_permission/common.handle_all_urls"],
-    "target": {
-      "namespace": "android_app",
-      "package_name": "st.service.app.debug",
-      "sha256_cert_fingerprints":
-      ["ED:F3:3F:16:3E:06:0A:9A:18:78:17:37:BE:97:6A:70:1B:B4:DA:6E:79:FF:5F:70:30:01:55:B2:A8:BC:FD:34"]
-    }
-  }]
