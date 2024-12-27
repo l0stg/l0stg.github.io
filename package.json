@@ -1,0 +1,16 @@
+{
+  "name": "l0stg.github.io",
+  "version": "1.0.0",
+  "description": "index.html главная странциы\r css - стили\r js - джаваскрипт",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
